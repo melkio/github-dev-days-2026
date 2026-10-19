@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Ubuntu",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:resolute",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/postfinance/devcontainer-features/dotnet:1": {},
+		"ghcr.io/postfinance/devcontainer-features/node:1": {},
+		"ghcr.io/devcontainers/features/copilot-cli:1": {}
+	},
+	"forwardPorts": [
+		39983
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.codeLens": false,
+				"files.exclude": {
+					"**/.git": true,
+					"**/.svn": true,
+					"**/.hg": true,
+					"**/.jj": true,
+					"**/.DS_Store": true,
+					"**/Thumbs.db": true,
+					"**/bin": true,
+					"**/obj": true
+				}
+			},
+			"extensions": [
+				"ms-dotnettools.csdevkit"
+			]
+		}
+	}
+}
